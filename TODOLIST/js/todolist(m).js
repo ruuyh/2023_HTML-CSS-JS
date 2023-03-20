@@ -49,6 +49,7 @@ function todoAdd(e) {
     check.addEventListener("click", todoCheck);
     // button에 클릭 이벤트 추가
     button.addEventListener("click", todoDelete);
+
 }
 
 // check에 들어가는 todoCheck 함수 작성
@@ -59,9 +60,11 @@ function todoCheck(e) {
     const li = check.parentNode;
     if(check.checked) {
         li.style.color = "lightgray";
-    
+        li.style.textDecoration = "line-through";
     }else {
         check.parentNode.style.color = "";
+        li.style.textDecoration = "";
+        li.span.style.textDecoration = "";
     }
 }
 
